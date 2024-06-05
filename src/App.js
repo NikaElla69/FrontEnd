@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Primeira edição no arquivo App.js</p>
-        <h5>Segunda</h5>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="title">Primeiro projeto em ReactJS</h1>
+      <img src="https://uploads.spiritfanfiction.com/historias/capas/201608/uma-historia-totalmente-aleatoria-interativa-6353447-300820162245.jpg"/>
     </div>
   );
 }
