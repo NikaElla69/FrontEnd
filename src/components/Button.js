@@ -1,8 +1,8 @@
 import "./Button.css"
 
-const Button = ({ texto }) => {
+const Button = ({ texto, onClickButton }) => {
     return (
-        <button>{texto}</button>
+        <button className="buttonContainer" onClick={onClickButton}>{texto}</button>
 
 
     );
