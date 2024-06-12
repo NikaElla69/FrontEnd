@@ -1,11 +1,26 @@
 import { useState } from "react";
 import "./ToDoList.css";
 
+
+const ListItem = ({ toDoItem }) => {
+    return (
+        <div>{toDoItem}</div>
+    )
+}
+
 const ToDoList = ({ pageTite }) => {
     const [toDoList, setToDoList] = useState([])
     const [inputValue, setInputValue] = useState()
+    console.log(inputValue);
+
     const onInputChange = (event) => {
-        console.log(event);
+        setInputValue(event.target.value);
+    }
+
+    const onClickAddTask = () => {
+        if (!inputValue) return;
+        setToDoList([...toDoList, inputValue])
+        setInputValue("")
     }
 
     return (
@@ -14,14 +29,17 @@ const ToDoList = ({ pageTite }) => {
                 <h1>{pageTite}</h1>
             </div>
             <div className="inputContainer">
-                <label for="taskText" className="inputLabel">Digite a sua tarefa: </label>
+                <label htmlFor="taskText" className="inputLabel">Digite a sua tarefa: </label>
                 <input
                     id="taskText"
                     name="taskText"
                     className="input"
-                    onChange={onInputChange} />
-                <button className="addButton">+</button>
+                    value={inputValue}
+                    onChange={onInputChange}
+                />
+                <button className="addButton" onClick={onClickAddTask}>+</button>
             </div>
+            {toDoList.map(toDoItem => (<ListItem toDoItem={toDoItem} />))}
         </div>
     );
 }
