@@ -2,4 +2,37 @@
     padding: 16px;
     width: 100%;
     background-color: blueviolet;
+    margin-bottom: 32px;
+}
+
+.inputContainer {
+    padding: 16px;
+}
+
+.inputLabel {
+    margin-right: 8px;
+    font-size: 24px;
+    color: brown;
+}
+
+.input {
+    width: 400px;
+    height: 32px;
+    border-color: brown;
+    border-radius: 5px;
+}
+
+.addButton {
+    width: 32px;
+    height: 32px;
+    background-color: rgb(70, 155, 70);
+    font-size: 24px;
+    border-radius: 5px;
+    margin-left: 16px;
+    border-color: rgb(68, 97, 47);
+
+    &:hover {
+        background-color: rgb(68, 97, 47);
+        border-color: rgb(70, 155, 70);
+    }
 }
