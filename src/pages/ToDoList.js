@@ -4,7 +4,7 @@ import "./ToDoList.css";
 
 const ListItem = ({ toDoItem }) => {
     return (
-        <div>{toDoItem}</div>
+        <div className="listItem" style={toDoItem.done ? { backgroundColor: "#b6ebb5" } : null}>{toDoItem.name}</div>
     )
 }
 
@@ -19,7 +19,7 @@ const ToDoList = ({ pageTite }) => {
 
     const onClickAddTask = () => {
         if (!inputValue) return;
-        setToDoList([...toDoList, inputValue])
+        setToDoList([...toDoList, { name: inputValue, done: false }])
         setInputValue("")
     }
 
@@ -39,7 +39,7 @@ const ToDoList = ({ pageTite }) => {
                 />
                 <button className="addButton" onClick={onClickAddTask}>+</button>
             </div>
-            {toDoList.map(toDoItem => (<ListItem toDoItem={toDoItem} />))}
+            <div className="list">{toDoList.map(toDoItem => (<ListItem toDoItem={toDoItem} />))}</div>
         </div>
     );
 }
