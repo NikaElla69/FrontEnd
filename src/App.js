@@ -1,14 +1,14 @@
 import "./App.css";
-import ToDoList from "./pages/ToDoList";
-import UseEffect from "./pages/UseEffect";
+//import ToDoList from "./pages/ToDoList";
+//import UseEffect from "./pages/UseEffect";
+import SimuleteApi from "./components/SimuleteApi";
 
 
 function App() {
 
   return (
     <div>
-      <ToDoList pageTite={"Lista de tarefas"} />
-      <UseEffect />
+      <SimuleteApi />
     </div>
   );
 }
