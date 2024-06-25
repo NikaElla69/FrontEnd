@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./SimuleteApi.css";
+import { Link } from "react-router-dom";
 
 const infoCampoMourao = {
     dataCriacao: '10/10/1947',
@@ -25,15 +26,20 @@ const SimuleteApi = () => {
     }, [])
     return (
         <div className="container">
-            {info ? <div>
-                <h3>{info.nome}</h3>
-                <h4>{info.dataCriacao}</h4>
-                <h4>{info.qtdHabitantes}</h4>
-                <h4>{info.universidades.map((universidades) => (
-                    <div>{universidades}</div>
-                ))}</h4>
-            </div> : <div>Carregando...</div>}
-        </div>
+            <Link to={"/todolist"}>
+                Ir para lista de tarefas
+            </Link>
+            {
+                info ? <div>
+                    <h3>{info.nome}</h3>
+                    <h4>{info.dataCriacao}</h4>
+                    <h4>{info.qtdHabitantes}</h4>
+                    <h4>{info.universidades.map((universidades) => (
+                        <div>{universidades}</div>
+                    ))}</h4>
+                </div> : <div>Carregando...</div>
+            }
+        </div >
     );
 }
 

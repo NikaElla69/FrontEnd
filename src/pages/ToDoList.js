@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ToDoList.css";
+import { useNavigate } from "react-router-dom";
 
 
 const ListItem = ({ toDoItem }) => {
@@ -9,6 +10,7 @@ const ListItem = ({ toDoItem }) => {
 }
 
 const ToDoList = ({ pageTite }) => {
+    const navigate = useNavigate()
     const [toDoList, setToDoList] = useState([])
     const [inputValue, setInputValue] = useState()
     console.log(inputValue);
@@ -40,6 +42,10 @@ const ToDoList = ({ pageTite }) => {
                 <button className="addButton" onClick={onClickAddTask}>+</button>
             </div>
             <div className="list">{toDoList.map(toDoItem => (<ListItem toDoItem={toDoItem} />))}</div>
+
+
+            <button onClick={() => navigate(-1)}>Voltar</button>
+
         </div>
     );
 }
