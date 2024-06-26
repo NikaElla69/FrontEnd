@@ -12,6 +12,9 @@ const Home = () => {
             <div>
                 <Link to="/search">Ir para a página de busca de pokemon</Link>
             </div>
+            <div>
+                <Link to="/post">Ir para a página de post</Link>
+            </div>
         </div>
     );
 }
