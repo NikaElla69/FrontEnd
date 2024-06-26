@@ -15,6 +15,9 @@ const Home = () => {
             <div>
                 <Link to="/post">Ir para a página de post</Link>
             </div>
+            <div>
+                <Link to="/postLibForm">Ir para a página de post Lib form</Link>
+            </div>
         </div>
     );
 }
