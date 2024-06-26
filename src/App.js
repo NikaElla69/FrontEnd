@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import SimuleteApi from "./components/SimuleteApi";
-import ToDoList from "./pages/ToDoList";
-import React from "react";
+//import SimuleteApi from "./components/SimuleteApi";
+//import ToDoList from "./pages/ToDoList";
+//import React from "react";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import Profile from "./pages/Profile";
